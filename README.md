@@ -14,16 +14,33 @@
 
 ---
 
-## Быстрый старт (одной командой)
+## Быстрый старт 
 
 > Требования: установлен `Docker` и `Docker Compose`.
 
+Сначала создайте и заполните .env
+```bash
+cp .env.example .env
+```
+Запуск контейнеров
 ```bash
 docker compose up -d --build
 ```
-
+Настройка прав
+```bash
+sudo chmod 777 -R ./
+```
+Генерация ключа приложения
+```bash
+docker compose exec app php artisan key:generate
+```
+После запуска доступны:
+- Web: http://localhost/
+- API: http://localhost/api/notes
 ## Тесты
 Чтобы проверить фукнционал API используйте данную команду.
 
 ```bash
 docker compose exec app php artisan test --filter NoteApiTest
+```
+
