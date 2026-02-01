@@ -43,4 +43,5 @@ docker compose exec app php artisan key:generate
 ```bash
 docker compose exec app php artisan test --filter NoteApiTest
 ```
-
+## Миграции
+Запускаются автоматически при билде.
