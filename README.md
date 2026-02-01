@@ -30,7 +30,7 @@ docker compose up -d --build
 ```bash
 sudo chmod 777 -R ./
 ```
-Генерация ключа приложения (опцилнально)
+Генерация ключа приложения (опционально)
 ```bash
 docker compose exec app php artisan key:generate
 ```
@@ -38,8 +38,14 @@ docker compose exec app php artisan key:generate
 - Web: http://localhost/
 - API: http://localhost/api/notes
 
+## Сидер
+Чтобы засидить данные для тестов используйте
+```bash
+docker compose exec app php artisan db:seed
+```
+
 ## Документация
-Для создания документации пропишите
+Для создания документации API пропишите
 ```bash
 docker compose exec app php artisan scribe:generate
 ```
