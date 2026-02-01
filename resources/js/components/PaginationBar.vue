@@ -1,4 +1,6 @@
 <script setup>
+import {computed} from "vue";
+
 const props = defineProps({
     current: Number,
     last: Number,
@@ -11,8 +13,8 @@ const props = defineProps({
 
 const emit = defineEmits(["prev", "next", "page"]);
 
-const canPrev = props.current > 1 && !props.loading;
-const canNext = props.current < props.last && !props.loading;
+const canPrev = computed(() => props.current > 1 && !props.loading);
+const canNext = computed(() => props.current < props.last && !props.loading);
 </script>
 
 <template>

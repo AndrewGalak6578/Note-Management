@@ -18,7 +18,7 @@
 
 > Требования: установлен `Docker` и `Docker Compose`.
 
-Сначала создайте и заполните .env
+Сначала создайте и заполните .env (опционально)
 ```bash
 cp .env.example .env
 ```
@@ -26,11 +26,11 @@ cp .env.example .env
 ```bash
 docker compose up -d --build
 ```
-Настройка прав
+Настройка прав (если будет 502)
 ```bash
 sudo chmod 777 -R ./
 ```
-Генерация ключа приложения
+Генерация ключа приложения (опцилнально)
 ```bash
 docker compose exec app php artisan key:generate
 ```
