@@ -37,6 +37,13 @@ docker compose exec app php artisan key:generate
 После запуска доступны:
 - Web: http://localhost/
 - API: http://localhost/api/notes
+
+## Документация
+Для создания документации пропишите
+```bash
+docker compose exec app php artisan scribe:generate
+```
+После этого откроется доступ к http://localhost/docs
 ## Тесты
 Чтобы проверить фукнционал API используйте данную команду.
 
